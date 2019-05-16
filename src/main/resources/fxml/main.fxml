@@ -9,41 +9,128 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-border-color: lightgrey; -fx-border-width: 3.0;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.printer.controller.mainController">
+<AnchorPane prefHeight="600.0" prefWidth="1500.0" style="-fx-border-color: lightgrey; -fx-border-width: 3.0;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.printer.controller.mainController">
    <children>
-      <Button layoutX="891.0" layoutY="541.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="89.0" text="Reports" />
-      <Label layoutX="266.0" layoutY="14.0" text="RMA Printer Inventory">
+      <Button layoutX="1342.0" layoutY="548.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="89.0" text="Reports" />
+      <Label layoutX="514.0" layoutY="14.0" text="RMA Printer Tracker">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <TabPane layoutX="66.0" layoutY="84.0" prefHeight="450.0" prefWidth="871.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="66.0" layoutY="84.0" prefHeight="450.0" prefWidth="1365.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="NeuraLabel - Replacement">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: lightgrey;">
                      <children>
-                        <TableView layoutX="14.0" layoutY="14.0" prefHeight="385.0" prefWidth="843.0">
+                        <TableView layoutX="14.0" layoutY="14.0" prefHeight="385.0" prefWidth="1333.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
+                            <TableColumn prefWidth="60.0" text="RMA #" />
+                            <TableColumn prefWidth="120.0" text="Customer Name" />
+                              <TableColumn prefWidth="56.0" text="Closed" />
+                              <TableColumn prefWidth="56.0" text="Issued" />
+                              <TableColumn prefWidth="96.0" text="Faulty SN" />
+                              <TableColumn prefWidth="96.0" text="Rep. SN" />
+                              <TableColumn prefWidth="77.0" text="Returned" />
+                              <TableColumn prefWidth="236.0" resizable="false" text="Notes" />
+                              <TableColumn prefWidth="236.0" resizable="false" text="Diagnosis" />
+                              <TableColumn prefWidth="70.0" text="Bulk Ink" />
+                              <TableColumn prefWidth="70.0" text="Issue" />
+                              <TableColumn prefWidth="56.0" text="Result" />
+                              <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="101.0" text="Approved" />
                           </columns>
                         </TableView>
                      </children>
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab text="NueraLabel - RMA">
+          <Tab text="NeuraLabel - RMA">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: lightgrey;" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: lightgrey;">
+                     <children>
+                        <TableView layoutX="16.0" layoutY="13.0" prefHeight="385.0" prefWidth="1333.0">
+                           <columns>
+                              <TableColumn prefWidth="60.0" text="RMA #" />
+                              <TableColumn prefWidth="120.0" text="Customer Name" />
+                              <TableColumn prefWidth="56.0" text="Closed" />
+                              <TableColumn prefWidth="56.0" text="Issued" />
+                              <TableColumn prefWidth="96.0" text="Faulty SN" />
+                              <TableColumn prefWidth="96.0" text="Rep. SN" />
+                              <TableColumn prefWidth="77.0" text="Returned" />
+                              <TableColumn prefWidth="236.0" text="Notes" />
+                              <TableColumn prefWidth="236.0" text="Diagnosis" />
+                              <TableColumn prefWidth="70.0" text="Bulk Ink" />
+                              <TableColumn prefWidth="70.0" text="Issue" />
+                              <TableColumn prefWidth="56.0" text="Result" />
+                              <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="101.0" text="Approved" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
             </content>
           </Tab>
             <Tab text="NeuraLog - Replacement">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="16.0" layoutY="13.0" prefHeight="385.0" prefWidth="1333.0">
+                           <columns>
+                              <TableColumn prefWidth="60.0" text="RMA #" />
+                              <TableColumn prefWidth="120.0" text="Customer Name" />
+                              <TableColumn prefWidth="56.0" text="Closed" />
+                              <TableColumn prefWidth="56.0" text="Issued" />
+                              <TableColumn prefWidth="96.0" text="Faulty SN" />
+                              <TableColumn prefWidth="96.0" text="Rep. SN" />
+                              <TableColumn prefWidth="77.0" text="Returned" />
+                              <TableColumn prefWidth="236.0" text="Notes" />
+                              <TableColumn prefWidth="236.0" text="Diagnosis" />
+                              <TableColumn prefWidth="70.0" text="Bulk Ink" />
+                              <TableColumn prefWidth="70.0" text="Issue" />
+                              <TableColumn prefWidth="56.0" text="Result" />
+                              <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="101.0" text="Approved" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
                </content>
             </Tab>
             <Tab text="NeuraLog - RMA">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="16.0" layoutY="13.0" prefHeight="385.0" prefWidth="1333.0">
+                           <columns>
+                              <TableColumn prefWidth="60.0" text="RMA #" />
+                              <TableColumn prefWidth="120.0" text="Customer Name" />
+                              <TableColumn prefWidth="56.0" text="Closed" />
+                              <TableColumn prefWidth="56.0" text="Issued" />
+                              <TableColumn prefWidth="96.0" text="Faulty SN" />
+                              <TableColumn prefWidth="96.0" text="Rep. SN" />
+                              <TableColumn prefWidth="77.0" text="Returned" />
+                              <TableColumn prefWidth="236.0" text="Notes" />
+                              <TableColumn prefWidth="236.0" text="Diagnosis" />
+                              <TableColumn prefWidth="70.0" text="Bulk Ink" />
+                              <TableColumn prefWidth="70.0" text="Issue" />
+                              <TableColumn prefWidth="56.0" text="Result" />
+                              <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="101.0" text="Approved" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Serial Number w/ No Printer">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="16.0" layoutY="13.0" prefHeight="385.0" prefWidth="1333.0">
+                           <columns>
+                              <TableColumn prefWidth="60.0" text="RMA #" />
+                              <TableColumn prefWidth="120.0" text="Customer Name" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Untitled">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                </content>
