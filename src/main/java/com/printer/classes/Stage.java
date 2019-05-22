@@ -1,4 +1,4 @@
-package com.printer;
+package com.printer.classes;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -12,7 +12,7 @@ public class Stage {
     private String stageName;
 
     @Id
-    @Column(name = "Stage_ID")
+    @Column(name = "stageid")
     public int getStageId() {
         return stageId;
     }
@@ -22,7 +22,7 @@ public class Stage {
     }
 
     @Basic
-    @Column(name = "Stage_Name")
+    @Column(name = "stagename")
     public String getStageName() {
         return stageName;
     }
@@ -43,5 +43,10 @@ public class Stage {
     @Override
     public int hashCode() {
         return Objects.hash(stageId, stageName);
+    }
+
+    @Override
+    public String toString() {
+        return stageName;
     }
 }

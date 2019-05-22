@@ -20,7 +20,7 @@
          <children>
             <DatePicker fx:id="ISSUE_DATE" layoutX="14.0" layoutY="35.0" prefHeight="31.0" prefWidth="122.0" />
             <DatePicker fx:id="RETURN_DATE" layoutX="156.0" layoutY="35.0" prefHeight="31.0" prefWidth="144.0" />
-            <ComboBox fx:id="CLOSED_BOX" layoutX="326.0" layoutY="35.0" prefHeight="31.0" prefWidth="91.0" />
+            <ComboBox fx:id="CLOSED_BOX" layoutX="326.0" layoutY="35.0" prefHeight="31.0" prefWidth="122.0" />
             <TextField fx:id="RMA_TEXT" layoutX="529.0" layoutY="35.0" prefHeight="31.0" prefWidth="134.0" />
             <TextField fx:id="CUSTOMER_TEXT" layoutX="14.0" layoutY="111.0" prefHeight="31.0" prefWidth="286.0" />
             <TextField fx:id="FAULTY_TEXT" layoutX="326.0" layoutY="111.0" prefHeight="31.0" prefWidth="193.0" />

@@ -11,6 +11,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class Main extends Application {
+
     private ConfigurableApplicationContext springContext;
     private Parent root;
 
