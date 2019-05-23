@@ -9,21 +9,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1558.0" style="-fx-border-color: lightgrey; -fx-border-width: 3.0;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.printer.controller.mainController">
+<AnchorPane prefHeight="772.0" prefWidth="1558.0" style="-fx-border-color: lightgrey; -fx-border-width: 3.0;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.printer.controller.mainController">
    <children>
-      <Button layoutX="1342.0" layoutY="548.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="89.0" text="Reports" />
+      <Button layoutX="1441.0" layoutY="30.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="89.0" text="Reports" />
       <Label layoutX="514.0" layoutY="14.0" text="RMA Printer Tracker">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <TabPane layoutX="66.0" layoutY="84.0" prefHeight="450.0" prefWidth="1399.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="66.0" layoutY="84.0" prefHeight="621.0" prefWidth="1399.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="NeuraLabel - Replacement">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1431.0" style="-fx-border-color: lightgrey;">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1399.0" style="-fx-border-color: lightgrey;">
                      <children>
-                        <TableView fx:id="REPLACEMENTLABEL_PRINTER" layoutX="14.0" layoutY="14.0" prefHeight="385.0" prefWidth="1333.0">
+                        <TableView fx:id="REPLACEMENTLABEL_PRINTER" layoutX="14.0" layoutY="14.0" prefHeight="555.0" prefWidth="1367.0">
                           <columns>
                             <TableColumn fx:id="RMA_COLUMN" prefWidth="60.0" text="RMA #" />
                             <TableColumn fx:id="CUSTOMER_COLUMN" prefWidth="120.0" text="Customer Name" />
@@ -34,13 +34,12 @@
                               <TableColumn fx:id="RETURNED_COLUMN" prefWidth="77.0" text="Returned" />
                               <TableColumn fx:id="NOTES_COLUMN" prefWidth="236.0" resizable="false" text="Notes" />
                               <TableColumn fx:id="DIAGNOSIS_COLUMN" prefWidth="236.0" resizable="false" text="Diagnosis" />
-                              <TableColumn fx:id="BULK_COLUMN" prefWidth="70.0" text="Bulk Ink" />
-                              <TableColumn fx:id="ISSUE_COLUMN" prefWidth="70.0" text="Issue" />
-                              <TableColumn fx:id="RESULT_COLUMN" prefWidth="56.0" text="Result" />
-                              <TableColumn fx:id="APPROVED_COLUMN" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="101.0" text="Approved" />
+                              <TableColumn fx:id="BULK_COLUMN" text="Bulk Ink" />
+                              <TableColumn fx:id="ISSUE_COLUMN" prefWidth="85.0" text="Issue" />
+                              <TableColumn fx:id="RESULT_COLUMN" prefWidth="85.0" text="Result" />
+                              <TableColumn fx:id="APPROVED_COLUMN" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="81.0" text="Approved" />
                           </columns>
                         </TableView>
-                        <Button fx:id="addButton" layoutX="1353.0" layoutY="14.0" mnemonicParsing="false" onAction="#addPrinter" prefHeight="32.0" prefWidth="32.0" text="+" />
                      </children>
                   </AnchorPane>
             </content>
@@ -49,7 +48,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: lightgrey;">
                      <children>
-                        <TableView fx:id="RMALABEL_PRINTER" layoutX="14.0" layoutY="14.0" prefHeight="385.0" prefWidth="1333.0">
+                        <TableView fx:id="RMALABEL_PRINTER" layoutX="14.0" layoutY="14.0" prefHeight="555.0" prefWidth="1370.0">
                            <columns>
                               <TableColumn fx:id="RMA_COLUMN" prefWidth="60.0" text="RMA #" />
                               <TableColumn fx:id="CUSTOMER_COLUMN" prefWidth="120.0" text="Customer Name" />
@@ -58,12 +57,12 @@
                               <TableColumn fx:id="FAULTY_COLUMN" prefWidth="96.0" text="Faulty SN" />
                               <TableColumn fx:id="REPLACEMENT_COLUMN" prefWidth="96.0" text="Rep. SN" />
                               <TableColumn fx:id="RETURNED_COLUMN" prefWidth="77.0" text="Returned" />
-                              <TableColumn fx:id="NOTES_COLUMN" prefWidth="236.0" resizable="false" text="Notes" />
-                              <TableColumn fx:id="DIAGNOSIS_COLUMN" prefWidth="236.0" resizable="false" text="Diagnosis" />
-                              <TableColumn fx:id="BULK_COLUMN" prefWidth="70.0" text="Bulk Ink" />
-                              <TableColumn fx:id="ISSUE_COLUMN" prefWidth="70.0" text="Issue" />
-                              <TableColumn fx:id="RESULT_COLUMN" prefWidth="56.0" text="Result" />
-                              <TableColumn fx:id="APPROVED_COLUMN" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="101.0" text="Approved" />
+                              <TableColumn fx:id="NOTES_COLUMN" prefWidth="248.0" resizable="false" text="Notes" />
+                              <TableColumn fx:id="DIAGNOSIS_COLUMN" prefWidth="263.0" resizable="false" text="Diagnosis" />
+                              <TableColumn fx:id="BULK_COLUMN" prefWidth="76.0" text="Bulk Ink" />
+                              <TableColumn fx:id="ISSUE_COLUMN" prefWidth="51.0" text="Issue" />
+                              <TableColumn fx:id="RESULT_COLUMN" prefWidth="89.0" text="Result" />
+                              <TableColumn fx:id="APPROVED_COLUMN" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="78.0" text="Approved" />
                            </columns>
                         </TableView>
                      </children>
@@ -74,7 +73,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="16.0" layoutY="13.0" prefHeight="385.0" prefWidth="1333.0">
+                        <TableView layoutX="16.0" layoutY="13.0" prefHeight="555.0" prefWidth="1333.0">
                            <columns>
                               <TableColumn prefWidth="60.0" text="RMA #" />
                               <TableColumn prefWidth="120.0" text="Customer Name" />
@@ -98,7 +97,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="16.0" layoutY="13.0" prefHeight="385.0" prefWidth="1333.0">
+                        <TableView layoutX="16.0" layoutY="13.0" prefHeight="555.0" prefWidth="1333.0">
                            <columns>
                               <TableColumn prefWidth="60.0" text="RMA #" />
                               <TableColumn prefWidth="120.0" text="Customer Name" />
@@ -120,9 +119,9 @@
             </Tab>
             <Tab text="Serial Number w/ No Printer">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: lightgrey;">
                      <children>
-                        <TableView layoutX="16.0" layoutY="13.0" prefHeight="385.0" prefWidth="1333.0">
+                        <TableView layoutX="16.0" layoutY="13.0" prefHeight="555.0" prefWidth="1333.0">
                            <columns>
                               <TableColumn prefWidth="60.0" text="RMA #" />
                               <TableColumn prefWidth="120.0" text="Customer Name" />
@@ -139,5 +138,6 @@
             </Tab>
         </tabs>
       </TabPane>
+      <Button fx:id="addButton" layoutX="1353.0" layoutY="726.0" mnemonicParsing="false" onAction="#addPrinter" prefHeight="32.0" prefWidth="112.0" text="Add" />
    </children>
 </AnchorPane>

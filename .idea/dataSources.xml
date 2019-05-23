@@ -15,5 +15,11 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="RMA_Printer@localhost" uuid="1299b30b-2fd6-4fde-8da1-3707ff4d3562">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/RMA_Printer</jdbc-url>
+    </data-source>
   </component>
 </project>

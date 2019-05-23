@@ -26,7 +26,8 @@ public class Printer {
     public Printer() {
     }
 
-    public Printer(int rmaId, String companyName, String closed, Date issueDate, String faultySn, String replacementSn, Date returnedDate, String notes, String diagnosis, Boolean bulkink, String issueCategory, String result, Boolean approved, Printertype printertype, Stage stageId) {
+    public Printer(int rmaId, String companyName, String closed, Date issueDate, String faultySn, String replacementSn, Date returnedDate,
+                   String notes, String diagnosis, Boolean bulkink, String issueCategory, String result, Boolean approved, Printertype printertype, Stage stageId) {
         this.rmaId = rmaId;
         this.companyName = companyName;
         this.closed = closed;
@@ -219,5 +220,10 @@ public class Printer {
     @Override
     public int hashCode() {
         return Objects.hash(rmaId, companyName, closed, issueDate, faultySn, replacementSn, returnedDate, notes, diagnosis, bulkink, issueCategory, result, approved);
+    }
+
+    @Override
+    public String toString() {
+        return bulkink + " " + approved;
     }
 }

@@ -8,13 +8,18 @@ import com.printer.repositories.PrinterTypeRepository;
 import com.printer.repositories.StageRepository;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
 import java.util.ArrayList;
@@ -22,6 +27,9 @@ import java.util.ResourceBundle;
 
 @Component
 public class AddPrinterController implements Initializable {
+
+    @Autowired
+    private ConfigurableApplicationContext applicationContext;
 
     public ArrayList<Printertype> printerNames;
 
@@ -42,12 +50,26 @@ public class AddPrinterController implements Initializable {
     @FXML
     private Button saveButton, testButton;
 
+    @FXML
+    private TableView<Printer> RMALABEL_PRINTER;
+
+    private Scene returnScene;
+
+    public mainController mainController;
+
     @Autowired
     private PrinterTypeRepository printerTypeRepository;
     @Autowired
     private StageRepository stageRepository;
     @Autowired
     private NeuraLabelRMARepository neuraLabelRMARepository;
+
+    public AddPrinterController() {
+    }
+
+    public void setReturnScene(Scene returnScene) {
+        this.returnScene = returnScene;
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -66,7 +88,8 @@ public class AddPrinterController implements Initializable {
                 "Hardware",
                         "Media Jam",
                         "Print Quality",
-                        "Marks, Error Code",
+                        "Marks",
+                        "Error Code",
                         "Dead",
                         "Network Board",
                         "Freeze",
@@ -93,7 +116,7 @@ public class AddPrinterController implements Initializable {
     }
 
     @FXML
-    private void addPrinter(){
+    private void addPrinter(ActionEvent event) throws IOException{
         Date date = Date.valueOf(ISSUE_DATE.getValue());
         Date returned = Date.valueOf(RETURN_DATE.getValue());
         Printer neuralabel = new Printer();
@@ -112,12 +135,23 @@ public class AddPrinterController implements Initializable {
         neuralabel.setApproved(APPROVED_BOX.getSelectionModel().getSelectedItem().equals("Yes"));
         neuralabel.setPrintertype(PRINTER_BOX.getSelectionModel().getSelectedItem());
         neuralabel.setStageId(STAGE_BOX.getSelectionModel().getSelectedItem());
-        neuraLabelRMARepository.save(neuralabel);
-        System.out.println(neuralabel);
+        neuraLabelRMARepository.saveAndFlush(neuralabel);
+        previousWindow(event);
+    }
+
+    private void previousWindow(ActionEvent event) throws IOException {
+        javafx.stage.Stage parent = (javafx.stage.Stage) ((Node)event.getSource()).getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
+        fxmlLoader.setControllerFactory(applicationContext::getBean);
+        mainController controller = fxmlLoader.getController();
+        controller.refresh();
+        parent.close();
+        /*Scene scene = new Scene(fxmlLoader.load());
+        parent.setScene(scene);*/
     }
 
     public void testing(){
-        System.out.println("Printer Types: " + printerTypeRepository.findAll() + "\n==========================");
-        stageRepository.findAll().forEach(e -> System.out.println(e.getStageName()));
+        System.out.println("Printer Types: " + printerTypeRepository.findAll() + "\n==========================\n" +
+        stageRepository.findAll());
     }
 }

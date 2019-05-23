@@ -12,4 +12,6 @@ public interface PrinterTypeRepository extends JpaRepository<Printertype, Intege
 
     @Override
     ArrayList<Printertype> findAll();
+
+    List<Printertype> findAllByPrinterName(String name);
 }

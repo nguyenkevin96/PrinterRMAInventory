@@ -11,7 +11,7 @@ public class Printertype {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "PrinterTypeID")
+    @Column(name = "printertypeid")
     public int getPrinterTypeId() {
         return printerTypeId;
     }
@@ -21,7 +21,7 @@ public class Printertype {
     }
 
     @Basic
-    @Column(name = "PrinterName")
+    @Column(name = "printername")
     public String getPrinterName() {
         return printerName;
     }
