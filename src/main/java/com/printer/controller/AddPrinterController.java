@@ -1,13 +1,11 @@
 package com.printer.controller;
 
 import com.printer.classes.Printer;
-import com.printer.classes.Printertype;
 import com.printer.classes.Stage;
 import com.printer.repositories.NeuraLabelRMARepository;
 import com.printer.repositories.PrinterTypeRepository;
 import com.printer.repositories.StageRepository;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -55,7 +53,7 @@ public class AddPrinterController implements Initializable {
 
     private Scene returnScene;
 
-    public mainController mainController;
+    public MainController mainController;
 
     @Autowired
     private PrinterTypeRepository printerTypeRepository;
@@ -143,11 +141,7 @@ public class AddPrinterController implements Initializable {
         javafx.stage.Stage parent = (javafx.stage.Stage) ((Node)event.getSource()).getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
         fxmlLoader.setControllerFactory(applicationContext::getBean);
-        mainController controller = fxmlLoader.getController();
-        controller.refresh();
         parent.close();
-        /*Scene scene = new Scene(fxmlLoader.load());
-        parent.setScene(scene);*/
     }
 
     public void testing(){

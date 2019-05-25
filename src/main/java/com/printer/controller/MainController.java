@@ -1,7 +1,6 @@
 package com.printer.controller;
 
 import com.printer.classes.Printer;
-import com.printer.classes.Printertype;
 import com.printer.repositories.NeuraLabelRMARepository;
 import com.printer.repositories.PrinterTypeRepository;
 import javafx.collections.FXCollections;
@@ -10,12 +9,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +23,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 @Controller
-public class mainController implements Initializable {
+public class MainController implements Initializable {
 
     @Autowired
     private ConfigurableApplicationContext applicationContext;
@@ -53,15 +49,11 @@ public class mainController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        listOfRmaLabel = FXCollections.observableArrayList();
-        listOfReplacedLabel = FXCollections.observableArrayList();
-        listOfRmaLog = FXCollections.observableArrayList();
-        listOfReplacedLog = FXCollections.observableArrayList();
         loadCellData();
-        loadData();
         wrappableCells();
         System.out.println("Called Main Controller");
     }
+
 
     private void wrappableCells(){
         //Sets the notes and diagnosis column into a wrappable text cell
@@ -103,7 +95,11 @@ public class mainController implements Initializable {
 
     }
 
-    private void loadData(){
+    public void loadData(){
+        listOfRmaLabel = FXCollections.observableArrayList();
+        listOfReplacedLabel = FXCollections.observableArrayList();
+        listOfRmaLog = FXCollections.observableArrayList();
+        listOfReplacedLog = FXCollections.observableArrayList();
         listOfRmaLabel.clear();
         listOfReplacedLabel.clear();
         listOfRmaLog.clear();
@@ -116,12 +112,12 @@ public class mainController implements Initializable {
     }
 
     public void refresh(){
-        listOfRmaLabel.clear();
-        listOfRmaLabel.addAll(neuraLabelRMARepository.findAllNeuraLabel());
+        loadData();
     }
 
     @FXML
     private void addPrinter(ActionEvent event) throws IOException {
+        //This is the original code for switching to the AddPrinter Form
         Stage parent = new Stage(); /*(Stage) ((Node)event.getSource()).getScene().getWindow();*/
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("/fxml/AddPrinter.fxml"));

@@ -20,5 +20,14 @@ public interface NeuraLabelRMARepository extends JpaRepository<Printer, Integer>
             "WHERE printertid = 1", nativeQuery = true)
     List<Printer> findAllNeuraLabel();
 
+    @Query(value = "SELECT * " +
+            "FROM printer " +
+            "INNER JOIN printertype " +
+            "ON printer.printerid = printertype.printertypeid " +
+            "INNER JOIN printertypevariant " +
+            "ON printertype.printervariant = printertypevariant.printertypevariantid " +
+            "WHERE printer.printerid = 1 AND printertype.printervariant = 2", nativeQuery = true)
+    List<Printer> findAllNueraLabel_Straight_CPath();
+
     //Returns printers that are label printers and are straight-throughs
 }

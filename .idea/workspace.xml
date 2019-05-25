@@ -2,23 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7354bf02-2907-47a7-877d-b28b75df74ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/printer/controller/ReportController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/Report.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/printer/classes/PrintertypePrintervariant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/printer/classes/Printertypevariant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/printer/repositories/PrinterTypeAndVariantRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/printer/classes/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/printer/classes/Printer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/printer/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/printer/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/printer/classes/Printertype.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/printer/classes/Printertype.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/printer/classes/Stage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/printer/classes/Stage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/printer/controller/AddPrinterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/printer/controller/AddPrinterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/printer/controller/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/printer/controller/mainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/printer/controller/mainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/printer/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/printer/repositories/NeuraLabelRMARepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/printer/repositories/NeuraLabelRMARepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/printer/repositories/PrinterTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/printer/repositories/PrinterTypeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/AddPrinter.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/AddPrinter.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/printer/controller/mainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/printer/controller/mainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/printer/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/printer/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/printer/controller/mainController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fxml/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/main.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -82,26 +80,6 @@
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="RMA_Printer@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="RMA_Printer: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="printer: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="RMA_Printer@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="RMA_Printer: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="printertype: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="rmaprinter@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
     </expand>
@@ -112,7 +90,7 @@
   </component>
   <component name="ExecutionTargetDialog">
     <checked>
-      <node key="58fd3d60-ee4d-47c7-a17f-7669fda0de0b" />
+      <node key="1299b30b-2fd6-4fde-8da1-3707ff4d3562" />
     </checked>
   </component>
   <component name="FavoritesManager">
@@ -121,10 +99,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/controller/mainController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/classes/Printer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="132" column="22" lean-forward="true" selection-start-line="132" selection-start-column="22" selection-end-line="132" selection-end-column="22" />
+            <state relative-caret-position="-203">
+              <caret line="186" selection-start-line="186" selection-end-line="186" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,23 +111,67 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/classes/Printertypevariant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/controller/AddPrinterController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="145" column="63" lean-forward="true" selection-start-line="145" selection-start-column="63" selection-end-line="145" selection-end-column="63" />
+            <state relative-caret-position="-289">
+              <caret line="76" column="34" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#setComboBoxData#0;class#AddPrinterController#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/repositories/StageRepository.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            <state relative-caret-position="221">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printertype">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printertypevariant">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/controller/MainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="564">
+              <caret line="114" column="19" selection-start-line="114" selection-start-column="19" selection-end-line="114" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/repositories/PrinterTypeAndVariantRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -158,69 +180,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/AddPrinter.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-          <provider editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/repositories/NeuraLabelRMARepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="22" column="72" selection-start-line="22" selection-start-column="72" selection-end-line="22" selection-end-column="72" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/Report.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/main.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="140" column="13" selection-start-line="140" selection-start-column="7" selection-end-line="140" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/classes/Stage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/controller/ReportController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/repositories/PrinterTypeRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            <state relative-caret-position="236">
+              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -233,9 +205,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -276,9 +248,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/printer/AddPrinterController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/printer/repositories/StageRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/printer/classes/Printertype.java" />
         <option value="$PROJECT_DIR$/target/classes/data.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/printer/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/printer/classes/Stage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/printer/window/Window.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/printer/connection/Connection.java" />
@@ -286,15 +256,20 @@
         <option value="$PROJECT_DIR$/src/main/resources/fxml/Reports.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/printer/controller/ReportController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/Report.fxml" />
-        <option value="$PROJECT_DIR$/src/main/resources/data.sql" />
-        <option value="$PROJECT_DIR$/src/main/resources/schema.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/printer/classes/Printer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/printer/repositories/PrinterTypeRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/printer/repositories/NeuraLabelRMARepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/fxml/AddPrinter.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/printer/controller/AddPrinterController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/printer/controller/mainController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/fxml/main.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/printer/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/printer/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/printer/classes/Printertypevariant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/printer/classes/Printertype.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/printer/repositories/PrinterTypeRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/printer/repositories/NeuraLabelRMARepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/printer/repositories/PrinterTypeAndVariantRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/schema.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/data.sql" />
       </list>
     </option>
   </component>
@@ -317,10 +292,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="195" />
-    <option name="y" value="82" />
-    <option name="width" value="976" />
-    <option name="height" value="1102" />
+    <option name="x" value="77" />
+    <option name="y" value="132" />
+    <option name="width" value="1541" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -387,14 +362,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="printer" type="462c0819:PsiDirectoryNode" />
               <item name="repositories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PrinterRMAInventory" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PrinterRMAInventory" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PrinterRMAInventory" type="b2602c69:ProjectViewProjectNode" />
@@ -481,7 +448,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql&#10;postgresql" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
-    <property name="JPA.DatabaseSchemaImportDialog" value="27d996a0-fee7-4eaa-8b89-640c812acbe9" />
+    <property name="JPA.DatabaseSchemaImportDialog" value="1299b30b-2fd6-4fde-8da1-3707ff4d3562" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -501,9 +468,12 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\School Related\3368 Advanced Java\PrinterRMAInventory\src\main\java\com\printer\controller" />
+      <recent name="D:\School Related\3368 Advanced Java\PrinterRMAInventory\src\main\java\com\printer" />
       <recent name="C:\Users\nguye\Desktop\School Related\3368 Advanced Java\RMA_Printer\src\main\resources\fxml" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.printer.classes" />
       <recent name="com.printer" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -564,7 +534,7 @@
       <workItem from="1558400341159" duration="9091000" />
       <workItem from="1558474858885" duration="15843000" />
       <workItem from="1558534526835" duration="13568000" />
-      <workItem from="1558620833925" duration="12069000" />
+      <workItem from="1558620833925" duration="26969000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1557472395640</created>
@@ -587,11 +557,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558035435843</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixed some repository queries, &quot;add&quot; separate window">
+      <created>1558640307885</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1558640307885</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96879000" />
+    <option name="totallyTimeSpent" value="111779000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -604,20 +581,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6935301" visible="true" weight="0.13856068" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6771653" visible="true" weight="0.13856068" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.30646992" side_tool="true" weight="0.13856068" />
-      <window_info id="Persistence" order="7" sideWeight="0.30456853" side_tool="true" weight="0.17293233" />
+      <window_info id="Persistence" order="7" sideWeight="0.32283464" side_tool="true" visible="true" weight="0.13856068" />
       <window_info anchor="bottom" id="SQL Generator" order="0" weight="0.32917964" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3281412" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.47219068" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.323496" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.2784091" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.3984109" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -626,11 +602,11 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.09648127" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053704" side_tool="true" weight="0.3291714" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3280363" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3272727" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="bottom" id="Floobits" order="15" />
-      <window_info anchor="bottom" id="Database Console" order="16" sideWeight="0.49946293" weight="0.32690126" />
+      <window_info anchor="bottom" id="Database Console" order="16" sideWeight="0.49946293" weight="0.32613635" />
       <window_info anchor="bottom" id="Java Enterprise" order="17" weight="0.3281412" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.13480128" />
@@ -653,76 +629,14 @@
     <MESSAGE value="Start" />
     <MESSAGE value="Changed the FXML" />
     <MESSAGE value="Added the printer form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the printer form" />
+    <MESSAGE value="Fixed some repository queries, &quot;add&quot; separate window" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some repository queries, &quot;add&quot; separate window" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1299b30b-2fd6-4fde-8da1-3707ff4d3562/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/stage" />
-    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printertype" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/window/Window.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/connection/DatabaseConnection.java" />
-    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printer" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/2.1.7.RELEASE/spring-data-jpa-2.1.7.RELEASE.jar!/org/springframework/data/jpa/repository/JpaRepository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printertype">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printertype">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printertype">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printertype">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printertype">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -777,44 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/classes/Printer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/classes/Printertype.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-107">
-          <caret line="63" column="27" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/classes/Stage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printertype">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -854,26 +730,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/repositories/StageRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/repositories/PrinterTypeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -898,15 +754,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/repositories/NeuraLabelRMARepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="22" column="72" selection-start-line="22" selection-start-column="72" selection-end-line="22" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printer">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
+    </entry>
+    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printer">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printer">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printer">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printer">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printer">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printer">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printer">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printer">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printer">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/javafx-src.zip!/javafx/util/Callback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/AddPrinter.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printer">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -923,10 +850,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printer">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/main.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="275" selection-start-line="11" selection-start-column="275" selection-end-line="11" selection-end-column="275" />
         </state>
       </provider>
     </entry>
@@ -941,6 +869,13 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/classes/Stage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -954,57 +889,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printer">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printer">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/AddPrinter.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printer">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/main.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="140" column="13" selection-start-line="140" selection-start-column="7" selection-end-line="140" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/controller/mainController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="132" column="22" lean-forward="true" selection-start-line="132" selection-start-column="22" selection-end-line="132" selection-end-column="22" />
+        <state relative-caret-position="364">
+          <caret line="50" column="68" lean-forward="true" selection-start-line="50" selection-start-column="68" selection-end-line="50" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/classes/Printertype.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/repositories/StageRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/repositories/PrinterTypeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="37" lean-forward="true" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/classes/PrintertypePrintervariant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/classes/Printer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-203">
+          <caret line="186" selection-start-line="186" selection-end-line="186" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/repositories/NeuraLabelRMARepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/repositories/PrinterTypeAndVariantRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="114" column="19" selection-start-line="114" selection-start-column="19" selection-end-line="114" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printertype">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1299b30b-2fd6-4fde-8da1-3707ff4d3562/database/RMA_Printer/schema/public/table/printertypevariant">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/controller/AddPrinterController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="145" column="63" lean-forward="true" selection-start-line="145" selection-start-column="63" selection-end-line="145" selection-end-column="63" />
+        <state relative-caret-position="-289">
+          <caret line="76" column="34" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setComboBoxData#0;class#AddPrinterController#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/printer/classes/Printertypevariant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>

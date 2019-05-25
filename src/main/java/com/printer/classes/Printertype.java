@@ -4,48 +4,45 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "printertype")
 public class Printertype {
-    private int printerTypeId;
-    private String printerName;
+    private int printertypeid;
+    private String printername;
+    private Printertypevariant printertypevariant;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "printertypeid")
-    public int getPrinterTypeId() {
-        return printerTypeId;
+    @Column(name = "printertypeid", nullable = false)
+    public int getPrintertypeid() {
+        return printertypeid;
     }
 
-    public void setPrinterTypeId(int printerTypeId) {
-        this.printerTypeId = printerTypeId;
+    public void setPrintertypeid(int printertypeid) {
+        this.printertypeid = printertypeid;
     }
 
     @Basic
-    @Column(name = "printername")
-    public String getPrinterName() {
-        return printerName;
+    @Column(name = "printername", nullable = false, length = 255)
+    public String getPrintername() {
+        return printername;
     }
 
-    public void setPrinterName(String printerName) {
-        this.printerName = printerName;
+    public void setPrintername(String printername) {
+        this.printername = printername;
     }
+
+    @OneToMany
+    @JoinColumn
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Printertype that = (Printertype) o;
-        return printerTypeId == that.printerTypeId &&
-                Objects.equals(printerName, that.printerName);
+        return printertypeid == that.printertypeid &&
+                Objects.equals(printername, that.printername);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(printerTypeId, printerName);
-    }
-
-    @Override
-    public String toString() {
-        return printerName;
+        return Objects.hash(printertypeid, printername);
     }
 }

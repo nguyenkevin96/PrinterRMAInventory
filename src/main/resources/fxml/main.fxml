@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="RMAPRINTERTRACKER_ANCHOR" prefHeight="772.0" prefWidth="1558.0" style="-fx-border-color: lightgrey; -fx-border-width: 3.0;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.printer.controller.mainController">
+<AnchorPane fx:id="RMAPRINTERTRACKER_ANCHOR" prefHeight="772.0" prefWidth="1531.0" style="-fx-border-color: lightgrey; -fx-border-width: 3.0;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.printer.controller.MainController">
    <children>
-      <Button layoutX="1441.0" layoutY="30.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="89.0" text="Reports" />
+      <Button layoutX="1376.0" layoutY="30.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="89.0" text="Reports" />
       <Label layoutX="514.0" layoutY="14.0" text="RMA Printer Tracker">
          <font>
             <Font size="48.0" />
@@ -139,5 +139,6 @@
         </tabs>
       </TabPane>
       <Button fx:id="addButton" layoutX="1353.0" layoutY="726.0" mnemonicParsing="false" onAction="#addPrinter" prefHeight="32.0" prefWidth="112.0" text="Add" />
+      <Button fx:id="RefreshButton" layoutX="1260.0" layoutY="726.0" mnemonicParsing="false" onAction="#refresh" prefHeight="32.0" prefWidth="80.0" text="Refresh" />
    </children>
 </AnchorPane>

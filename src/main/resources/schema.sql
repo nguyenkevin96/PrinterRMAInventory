@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS printer;
+DROP TABLE IF EXISTS printertype_printervariant;
 DROP TABLE IF EXISTS stage;
 DROP TABLE IF EXISTS printertype;
 DROP TABLE IF EXISTS printertypevariant;
@@ -59,31 +60,38 @@ CREATE TABLE printertypevariant
 
 CREATE TABLE printertype
 (
-    printertypeid serial,
-    printername varchar(255) NOT NULL,
-    printervariant INT NULL,
-    PRIMARY KEY (printertypeid),
-    FOREIGN KEY (printervariant) REFERENCES printertypevariant(printertypevariantid)
+    printertypeid serial PRIMARY KEY ,
+    printername varchar(255) NOT NULL
+);
+
+CREATE TABLE printertype_printervariant
+(
+    id serial not null,
+    printertypeid int not null,
+    printervariantid int not null,
+    primary key (id),
+    foreign key (printertypeid) references printertype(printertypeid) ON DELETE CASCADE ,
+    foreign key (printervariantid) references printertypevariant(printertypevariantid) ON DELETE CASCADE
 );
 
 CREATE TABLE printer
 (
-  rmaid           int          not null,
-  company_name    varchar(255) null,
-  closed          varchar(255) null,
-  issue_date      date         null,
-  faulty_sn       varchar(255) null,
-  replacement_sn  varchar(255) null,
-  returned_date   date         null,
-  notes           varchar(255) null,
-  diagnosis       varchar(255) null,
-  bulkink         Boolean      null,
-  issue_category  varchar(255) null,
-  result          varchar(255) null,
-  approved        Boolean      null,
-  printertid      int          not null,
-  printer_stageid int          not null,
-  PRIMARY KEY (rmaid),
-  FOREIGN KEY (printertid) REFERENCES printertype(PrinterTypeID) ON DELETE CASCADE,
-  FOREIGN KEY (printer_stageid) REFERENCES stage(stageid) ON DELETE CASCADE
+    rmaid           int          not null,
+    company_name    varchar(255) null,
+    closed          varchar(255) null,
+    issue_date      date         null,
+    faulty_sn       varchar(255) null,
+    replacement_sn  varchar(255) null,
+    returned_date   date         null,
+    notes           varchar(255) null,
+    diagnosis       varchar(255) null,
+    bulkink         Boolean      null,
+    issue_category  varchar(255) null,
+    result          varchar(255) null,
+    approved        Boolean      null,
+    printer_type_variant      int          not null,
+    printer_stageid int          not null,
+    PRIMARY KEY (rmaid),
+    FOREIGN KEY (printer_type_variant) REFERENCES printertype_printervariant(id) ON DELETE CASCADE,
+    FOREIGN KEY (printer_stageid) REFERENCES stage(stageid) ON DELETE CASCADE
 )
