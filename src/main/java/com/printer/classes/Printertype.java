@@ -11,6 +11,7 @@ public class Printertype {
     private int printertypeid;
     private String printername;
     private String printervariant;
+    private String printerrmatype;
 
     @Id
     @Column(name = "printertypeid")
@@ -42,6 +43,16 @@ public class Printertype {
         this.printervariant = printervariant;
     }
 
+    @Basic
+    @Column(name = "printerrmatype")
+    public String getPrinterrmatype() {
+        return printerrmatype;
+    }
+
+    public void setPrinterrmatype(String printerrmatype) {
+        this.printerrmatype = printerrmatype;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -59,6 +70,6 @@ public class Printertype {
 
     @Override
     public String toString() {
-        return printername + " (" + printervariant + ")";
+        return printerrmatype + " - " + printername + " (" + printervariant + ")";
     }
 }

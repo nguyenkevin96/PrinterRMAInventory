@@ -48,6 +48,8 @@ public class AddPrinterController implements Initializable {
     private TextArea NOTES_TEXTA, DIAGNOSIS_TEXTA;
     @FXML
     private Button saveButton, testButton;
+    @FXML
+    private Label TYPE1_TEXT, TYPE2_TEXT, TYPE3_TEXT;
 
     @FXML
     private TableView<Printer> RMALABEL_PRINTER;
@@ -63,9 +65,6 @@ public class AddPrinterController implements Initializable {
     @Autowired
     private NeuraLabelRMARepository neuraLabelRMARepository;
 
-    public AddPrinterController() {
-    }
-
     public void setReturnScene(Scene returnScene) {
         this.returnScene = returnScene;
     }
@@ -73,6 +72,12 @@ public class AddPrinterController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         setComboBoxData();
+
+        PRINTER_BOX.getSelectionModel().selectedItemProperty().addListener((v, oldValue, newValue) -> {
+            TYPE1_TEXT.setText(newValue.getPrinterrmatype());
+            TYPE2_TEXT.setText(newValue.getPrintername());
+            TYPE3_TEXT.setText(newValue.getPrintervariant());
+        });
     }
 
     private void setComboBoxData(){

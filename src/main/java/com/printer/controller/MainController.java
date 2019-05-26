@@ -31,7 +31,7 @@ public class MainController implements Initializable {
     public TableColumn<Printer, String> RMA_COLUMN, CUSTOMER_COLUMN, CLOSED_COLUMN, ISSUED_COLUMN, FAULTY_COLUMN, REPLACEMENT_COLUMN,
             RETURNED_COLUMN, NOTES_COLUMN, DIAGNOSIS_COLUMN, BULK_COLUMN, ISSUE_COLUMN, RESULT_COLUMN, APPROVED_COLUMN;
 
-    public TableView<Printer> RMALABEL_PRINTER;
+    public TableView<Printer> RMALABEL_PRINTER, REPLACEMENTLABEL_PRINTER, REPLACEMENTLOG_PRINTER, RMALOG_PRINTER;
 
     private TableCell<Printer, String> notesCell, diagnosisCell;
     private Text text;
@@ -49,6 +49,10 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        listOfRmaLabel = FXCollections.observableArrayList();
+        listOfReplacedLabel = FXCollections.observableArrayList();
+        listOfRmaLog = FXCollections.observableArrayList();
+        listOfReplacedLog = FXCollections.observableArrayList();
         loadCellData();
         wrappableCells();
         System.out.println("Called Main Controller");
@@ -92,22 +96,25 @@ public class MainController implements Initializable {
         RESULT_COLUMN.setCellValueFactory(new PropertyValueFactory<>("result"));
         APPROVED_COLUMN.setCellValueFactory(new PropertyValueFactory<>("approved"));
 
+        //Create new Column names for the 3 other tables in the fxml
+
     }
 
     public void loadData(){
-        listOfRmaLabel = FXCollections.observableArrayList();
-        listOfReplacedLabel = FXCollections.observableArrayList();
-        listOfRmaLog = FXCollections.observableArrayList();
-        listOfReplacedLog = FXCollections.observableArrayList();
         listOfRmaLabel.clear();
         listOfReplacedLabel.clear();
         listOfRmaLog.clear();
         listOfReplacedLog.clear();
-        listOfRmaLabel.addAll(neuraLabelRMARepository.findAllNeuraLabelStraightThrough());
-//        listOfReplacedLabel.addAll(neuraLabelRMARepository.findAllByPrintertypeContains("NeuraLabel"));
-//        listOfRmaLog.addAll(neuraLabelRMARepository.findAllByPrintertypeContains("NeuraLog"));
-//        listOfReplacedLog.addAll(neuraLabelRMARepository.findAllByPrintertypeContains("Neura"));
+
+        listOfRmaLabel.addAll(neuraLabelRMARepository.findAllRMANeuraLabel());
+        listOfReplacedLabel.addAll(neuraLabelRMARepository.findAllReplacedNeuraLabel());
+        listOfRmaLog.addAll(neuraLabelRMARepository.findAllRMANeuraLog());
+        listOfReplacedLog.addAll(neuraLabelRMARepository.findAllReplacedNeuraLog());
+
         RMALABEL_PRINTER.setItems(listOfRmaLabel);
+        REPLACEMENTLABEL_PRINTER.setItems(listOfReplacedLabel);
+        RMALOG_PRINTER.setItems(listOfRmaLog);
+        REPLACEMENTLOG_PRINTER.setItems(listOfReplacedLog);
     }
 
     @FXML

@@ -16,7 +16,8 @@ create table printertype
   printertypeid int auto_increment
     primary key,
   printername   varchar(255) null,
-  printervariant varchar(255)
+  printervariant varchar(255),
+  printerrmatype varchar(255)
 );
 
 create table printer

@@ -18,30 +18,20 @@ public interface NeuraLabelRMARepository extends JpaRepository<Printer, Integer>
     @Query(value = "SELECT * " +
             "FROM printer " +
             "WHERE printertid = 1 OR printertid = 2 OR printertid = 3", nativeQuery = true)
-    List<Printer> findAllNeuraLabelStandard();
+    List<Printer> findAllReplacedNeuraLabel();
 
     @Query(value = "SELECT * " +
             "FROM printer " +
-            "WHERE printertid = 2", nativeQuery = true)
-    List<Printer> findAllNeuraLabelStraightThrough();
+            "WHERE printertid = 4 OR printertid = 5 OR printertid = 6", nativeQuery = true)
+    List<Printer> findAllRMANeuraLabel();
 
     @Query(value = "SELECT * " +
             "FROM printer " +
-            "WHERE printertid = 3", nativeQuery = true)
-    List<Printer> findAllNeuraLabelCPath();
+            "WHERE printertid = 7 OR printertid = 8 OR printertid = 9", nativeQuery = true)
+    List<Printer> findAllReplacedNeuraLog();
 
     @Query(value = "SELECT * " +
             "FROM printer " +
-            "WHERE printertid = 4", nativeQuery = true)
-    List<Printer> findAllNeuraLogSCPath();
-
-    @Query(value = "SELECT * " +
-            "FROM printer " +
-            "WHERE printertid = 5", nativeQuery = true)
-    List<Printer> findAllNeuraLogStraightThrough();
-
-    @Query(value = "SELECT * " +
-            "FROM printer " +
-            "WHERE printertid = 6", nativeQuery = true)
-    List<Printer> findAllNeuraLogCPath();
+            "WHERE printertid = 10 OR printertid = 11 OR printertid = 12", nativeQuery = true)
+    List<Printer> findAllRMANeuraLog();
 }
