@@ -1,6 +1,7 @@
 package com.printer.controller;
 
 import com.printer.classes.Printer;
+import com.printer.classes.Printertype;
 import com.printer.classes.Stage;
 import com.printer.repositories.NeuraLabelRMARepository;
 import com.printer.repositories.PrinterTypeRepository;

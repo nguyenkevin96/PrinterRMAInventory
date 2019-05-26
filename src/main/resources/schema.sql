@@ -1,9 +1,7 @@
 DROP TABLE IF EXISTS printer;
-DROP TABLE IF EXISTS printertype_printervariant;
 DROP TABLE IF EXISTS stage;
 DROP TABLE IF EXISTS printertype;
-DROP TABLE IF EXISTS printertypevariant;
-/*
+
 -- Script for MySQL --
 create table stage
 (
@@ -12,11 +10,13 @@ create table stage
   stagename varchar(45) not null
 );
 
+
 create table printertype
 (
-  printer_typeid int auto_increment
+  printertypeid int auto_increment
     primary key,
-  printer_name   varchar(255) null
+  printername   varchar(255) null,
+  printervariant varchar(255)
 );
 
 create table printer
@@ -38,11 +38,11 @@ create table printer
   printertid      int              ,
   printer_stageid int              ,
 
-  FOREIGN KEY (printertid) REFERENCES printertype(printer_typeid) ON DELETE CASCADE,
+  FOREIGN KEY (printertid) REFERENCES printertype(printertypeid) ON DELETE CASCADE,
   FOREIGN KEY (printer_stageid) REFERENCES stage(stageid) ON DELETE CASCADE
-);*/
+);
 
--- Script for Postgres --
+/*-- Script for Postgres --
 CREATE TABLE stage
 (
     stageid serial,
@@ -95,3 +95,4 @@ CREATE TABLE printer
     FOREIGN KEY (printer_type_variant) REFERENCES printertype_printervariant(id) ON DELETE CASCADE,
     FOREIGN KEY (printer_stageid) REFERENCES stage(stageid) ON DELETE CASCADE
 )
+*/

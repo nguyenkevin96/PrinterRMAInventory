@@ -54,9 +54,8 @@ public class MainController implements Initializable {
         System.out.println("Called Main Controller");
     }
 
-
+    //Sets the notes and diagnosis column into a wrappable text cell
     private void wrappableCells(){
-        //Sets the notes and diagnosis column into a wrappable text cell
         NOTES_COLUMN.setCellFactory(tc -> {
             notesCell = new TableCell<>();
             text = new Text();
@@ -104,21 +103,17 @@ public class MainController implements Initializable {
         listOfReplacedLabel.clear();
         listOfRmaLog.clear();
         listOfReplacedLog.clear();
-        listOfRmaLabel.addAll(neuraLabelRMARepository.findAllNeuraLabel());
+        listOfRmaLabel.addAll(neuraLabelRMARepository.findAllNeuraLabelStraightThrough());
 //        listOfReplacedLabel.addAll(neuraLabelRMARepository.findAllByPrintertypeContains("NeuraLabel"));
 //        listOfRmaLog.addAll(neuraLabelRMARepository.findAllByPrintertypeContains("NeuraLog"));
 //        listOfReplacedLog.addAll(neuraLabelRMARepository.findAllByPrintertypeContains("Neura"));
         RMALABEL_PRINTER.setItems(listOfRmaLabel);
     }
 
-    public void refresh(){
-        loadData();
-    }
-
     @FXML
     private void addPrinter(ActionEvent event) throws IOException {
         //This is the original code for switching to the AddPrinter Form
-        Stage parent = new Stage(); /*(Stage) ((Node)event.getSource()).getScene().getWindow();*/
+        Stage parent = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("/fxml/AddPrinter.fxml"));
         fxmlLoader.setControllerFactory(applicationContext::getBean);

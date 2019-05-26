@@ -17,17 +17,31 @@ public interface NeuraLabelRMARepository extends JpaRepository<Printer, Integer>
     //Returns printers that are Label Printers
     @Query(value = "SELECT * " +
             "FROM printer " +
-            "WHERE printertid = 1", nativeQuery = true)
-    List<Printer> findAllNeuraLabel();
+            "WHERE printertid = 1 OR printertid = 2 OR printertid = 3", nativeQuery = true)
+    List<Printer> findAllNeuraLabelStandard();
 
     @Query(value = "SELECT * " +
             "FROM printer " +
-            "INNER JOIN printertype " +
-            "ON printer.printerid = printertype.printertypeid " +
-            "INNER JOIN printertypevariant " +
-            "ON printertype.printervariant = printertypevariant.printertypevariantid " +
-            "WHERE printer.printerid = 1 AND printertype.printervariant = 2", nativeQuery = true)
-    List<Printer> findAllNueraLabel_Straight_CPath();
+            "WHERE printertid = 2", nativeQuery = true)
+    List<Printer> findAllNeuraLabelStraightThrough();
 
-    //Returns printers that are label printers and are straight-throughs
+    @Query(value = "SELECT * " +
+            "FROM printer " +
+            "WHERE printertid = 3", nativeQuery = true)
+    List<Printer> findAllNeuraLabelCPath();
+
+    @Query(value = "SELECT * " +
+            "FROM printer " +
+            "WHERE printertid = 4", nativeQuery = true)
+    List<Printer> findAllNeuraLogSCPath();
+
+    @Query(value = "SELECT * " +
+            "FROM printer " +
+            "WHERE printertid = 5", nativeQuery = true)
+    List<Printer> findAllNeuraLogStraightThrough();
+
+    @Query(value = "SELECT * " +
+            "FROM printer " +
+            "WHERE printertid = 6", nativeQuery = true)
+    List<Printer> findAllNeuraLogCPath();
 }

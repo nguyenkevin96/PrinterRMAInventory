@@ -58,7 +58,6 @@ public class Main extends Application {
                         Thread.sleep(1000);
                     } catch (InterruptedException ex){
                     }
-
                     Platform.runLater(runnable);
                 }
             }
