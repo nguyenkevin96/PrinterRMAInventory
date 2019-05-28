@@ -8,35 +8,27 @@ import java.util.Objects;
 
 @Entity
 public class Stage {
-    private int stageId;
-    private String stageName;
-
-    public Stage() {
-    }
-
-    public Stage(int stageId, String stageName) {
-        this.stageId = stageId;
-        this.stageName = stageName;
-    }
+    private int stageid;
+    private String stagename;
 
     @Id
     @Column(name = "stageid")
-    public int getStageId() {
-        return stageId;
+    public int getStageid() {
+        return stageid;
     }
 
-    private void setStageId(int stageId) {
-        this.stageId = stageId;
+    public void setStageid(int stageid) {
+        this.stageid = stageid;
     }
 
     @Basic
     @Column(name = "stagename")
-    public String getStageName() {
-        return stageName;
+    public String getStagename() {
+        return stagename;
     }
 
-    private void setStageName(String stageName) {
-        this.stageName = stageName;
+    public void setStagename(String stagename) {
+        this.stagename = stagename;
     }
 
     @Override
@@ -44,17 +36,17 @@ public class Stage {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Stage stage = (Stage) o;
-        return stageId == stage.stageId &&
-                Objects.equals(stageName, stage.stageName);
+        return stageid == stage.stageid &&
+                Objects.equals(stagename, stage.stagename);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(stageId, stageName);
+        return Objects.hash(stageid, stagename);
     }
 
     @Override
     public String toString() {
-        return stageName;
+        return stagename;
     }
 }

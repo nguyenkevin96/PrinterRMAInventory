@@ -9,50 +9,50 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="545.0" prefWidth="816.0" style="-fx-border-color: lightgrey; -fx-border-width: 5.0;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.printer.controller.AddPrinterController">
+<AnchorPane prefHeight="603.0" prefWidth="856.0" style="-fx-border-color: lightgrey; -fx-border-width: 5.0;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.printer.controller.AddPrinterController">
    <children>
-      <Label layoutX="308.0" layoutY="25.0" text="Add Printer">
+      <Label layoutX="328.0" layoutY="25.0" text="Add Printer">
          <font>
             <Font size="40.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="37.0" layoutY="93.0" prefHeight="400.0" prefWidth="742.0" style="-fx-border-color: lightgrey;">
+      <AnchorPane layoutX="35.0" layoutY="83.0" prefHeight="451.0" prefWidth="787.0" style="-fx-border-color: lightgrey;">
          <children>
             <DatePicker fx:id="ISSUE_DATE" layoutX="14.0" layoutY="35.0" prefHeight="17.0" prefWidth="122.0" />
             <DatePicker fx:id="RETURN_DATE" layoutX="156.0" layoutY="35.0" prefHeight="21.0" prefWidth="144.0" />
             <ComboBox fx:id="CLOSED_BOX" layoutX="326.0" layoutY="35.0" prefHeight="17.0" prefWidth="122.0" />
-            <TextField fx:id="RMA_TEXT" layoutX="529.0" layoutY="35.0" prefHeight="17.0" prefWidth="134.0" />
+            <TextField fx:id="RMA_TEXT" layoutX="561.0" layoutY="35.0" prefHeight="31.0" prefWidth="140.0" />
             <TextField fx:id="CUSTOMER_TEXT" layoutX="13.0" layoutY="95.0" prefHeight="21.0" prefWidth="286.0" />
-            <TextField fx:id="FAULTY_TEXT" layoutX="326.0" layoutY="95.0" prefHeight="17.0" prefWidth="193.0" />
-            <TextField fx:id="REPLACEMENT_TEXT" layoutX="529.0" layoutY="95.0" prefHeight="17.0" prefWidth="193.0" />
-            <TextArea fx:id="NOTES_TEXTA" layoutX="13.0" layoutY="198.0" prefHeight="190.0" prefWidth="219.0" wrapText="true" />
-            <TextArea fx:id="DIAGNOSIS_TEXTA" layoutX="258.0" layoutY="199.0" prefHeight="190.0" prefWidth="219.0" wrapText="true" />
+            <TextField fx:id="FAULTY_TEXT" layoutX="326.0" layoutY="95.0" prefHeight="31.0" prefWidth="212.0" />
+            <TextField fx:id="REPLACEMENT_TEXT" layoutX="561.0" layoutY="95.0" prefHeight="31.0" prefWidth="212.0" />
+            <TextArea fx:id="NOTES_TEXTA" layoutX="13.0" layoutY="208.0" prefHeight="232.0" prefWidth="219.0" wrapText="true" />
+            <TextArea fx:id="DIAGNOSIS_TEXTA" layoutX="258.0" layoutY="208.0" prefHeight="232.0" prefWidth="219.0" wrapText="true" />
             <Label layoutX="326.0" layoutY="73.0" text="Faulty Serial #" />
-            <Label layoutX="529.0" layoutY="14.0" text="RMA Number" />
+            <Label layoutX="561.0" layoutY="14.0" text="RMA Number" />
             <Label layoutX="14.0" layoutY="73.0" text="Customer Name" />
             <Label layoutX="326.0" layoutY="14.0" text="Closed?" />
             <Label layoutX="14.0" layoutY="14.0" text="Issue Date" />
             <Label layoutX="156.0" layoutY="14.0" text="Return Date" />
-            <Label layoutX="529.0" layoutY="73.0" text="Replacement Serial #" />
-            <Label layoutX="14.0" layoutY="181.0" text="Notes" />
-            <Label layoutX="258.0" layoutY="181.0" text="Diagnosis" />
-            <AnchorPane layoutX="496.0" layoutY="199.0" prefHeight="190.0" prefWidth="233.0" snapToPixel="false" style="-fx-border-color: lightgrey; -fx-border-width: 1;">
+            <Label layoutX="561.0" layoutY="73.0" text="Replacement Serial #" />
+            <Label layoutX="14.0" layoutY="191.0" text="Notes" />
+            <Label layoutX="258.0" layoutY="190.0" text="Diagnosis" />
+            <AnchorPane layoutX="505.0" layoutY="208.0" prefHeight="190.0" prefWidth="265.0" snapToPixel="false" style="-fx-border-color: lightgrey; -fx-border-width: 1;">
                <children>
-                  <ComboBox fx:id="BULK_BOX" layoutX="87.0" layoutY="12.0" prefHeight="17.0" prefWidth="130.0" />
-                  <ComboBox fx:id="ISSUE_BOX" layoutX="87.0" layoutY="48.0" prefHeight="17.0" prefWidth="130.0" />
-                  <ComboBox fx:id="RESULT_BOX" layoutX="87.0" layoutY="82.0" prefHeight="17.0" prefWidth="130.0" />
-                  <ComboBox fx:id="APPROVED_BOX" layoutX="87.0" layoutY="118.0" prefHeight="17.0" prefWidth="130.0" />
-                  <ComboBox fx:id="STAGE_BOX" layoutX="87.0" layoutY="152.0" prefHeight="17.0" prefWidth="130.0" />
+                  <ComboBox fx:id="BULK_BOX" layoutX="120.0" layoutY="11.0" prefHeight="17.0" prefWidth="130.0" />
+                  <ComboBox fx:id="ISSUE_BOX" layoutX="120.0" layoutY="45.0" prefHeight="17.0" prefWidth="130.0" />
+                  <ComboBox fx:id="RESULT_BOX" layoutX="120.0" layoutY="80.0" prefHeight="17.0" prefWidth="130.0" />
+                  <ComboBox fx:id="APPROVED_BOX" layoutX="120.0" layoutY="115.0" prefHeight="17.0" prefWidth="130.0" />
+                  <ComboBox fx:id="STAGE_BOX" layoutX="120.0" layoutY="151.0" prefHeight="17.0" prefWidth="130.0" />
                   <Label layoutX="14.0" layoutY="16.0" text="Bulk Ink?" />
                   <Label layoutX="14.0" layoutY="50.0" prefHeight="21.0" prefWidth="59.0" text="Issue" />
                   <Label layoutX="14.0" layoutY="84.0" prefHeight="21.0" prefWidth="59.0" text="Result" />
-                  <Label layoutX="14.0" layoutY="120.0" prefHeight="21.0" prefWidth="59.0" text="Approved" />
+                  <Label layoutX="14.0" layoutY="120.0" prefHeight="21.0" text="Approved" />
                   <Label layoutX="14.0" layoutY="156.0" text="Stage" />
                </children>
             </AnchorPane>
-            <Label layoutX="14.0" layoutY="133.0" prefHeight="17.0" prefWidth="73.0" text="Printer Type" />
-            <ComboBox fx:id="PRINTER_BOX" layoutX="16.0" layoutY="150.0" prefHeight="25.0" prefWidth="212.0" />
-            <AnchorPane layoutX="258.0" layoutY="127.0" prefHeight="47.0" prefWidth="471.0" style="-fx-border-color: lightgrey;">
+            <Label layoutX="14.0" layoutY="133.0" text="Printer Type" />
+            <ComboBox fx:id="PRINTER_BOX" layoutX="13.0" layoutY="154.0" prefHeight="31.0" prefWidth="265.0" />
+            <AnchorPane layoutX="300.0" layoutY="133.0" prefHeight="51.0" prefWidth="471.0" style="-fx-border-color: lightgrey;">
                <children>
                   <Label layoutX="21.0" layoutY="2.0" prefHeight="17.0" prefWidth="73.0" text="RMA Type:" textAlignment="RIGHT" />
                   <Label layoutX="160.0" layoutY="2.0" prefHeight="17.0" prefWidth="73.0" text="Type:" textAlignment="RIGHT" />
@@ -61,8 +61,11 @@
                   <Label fx:id="TYPE2_TEXT" layoutX="160.0" layoutY="23.0" prefHeight="17.0" prefWidth="130.0" />
                   <Label fx:id="TYPE3_TEXT" layoutX="297.0" layoutY="23.0" prefHeight="17.0" prefWidth="130.0" />
                </children></AnchorPane>
+            <Label fx:id="ERROR_LABEL" layoutX="505.0" layoutY="413.0" text="Error Code" visible="false" />
+            <TextField fx:id="ERROR_TEXT" layoutX="583.0" layoutY="408.0" visible="false" />
          </children>
       </AnchorPane>
-      <Button fx:id="saveButton" layoutX="667.0" layoutY="501.0" mnemonicParsing="false" onAction="#addPrinter" prefHeight="33.0" prefWidth="112.0" text="Save" />
+      <Button fx:id="saveButton" layoutX="710.0" layoutY="554.0" mnemonicParsing="false" onAction="#addPrinter" prefHeight="33.0" prefWidth="112.0" text="Save" />
+      <Button fx:id="saveButton1" layoutX="473.0" layoutY="554.0" mnemonicParsing="false" onAction="#test" prefHeight="33.0" prefWidth="112.0" text="Nothing" />
    </children>
 </AnchorPane>

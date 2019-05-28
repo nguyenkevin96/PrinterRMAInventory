@@ -1,13 +1,14 @@
 package com.printer.classes;
 
+import javafx.application.Platform;
+
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Objects;
 
 @Entity
-@Table(name = "printer")
 public class Printer {
-    private int rmaId;
+    private int rmaid;
     private String companyName;
     private String closed;
     private Date issueDate;
@@ -20,15 +21,14 @@ public class Printer {
     private String issueCategory;
     private String result;
     private Boolean approved;
-    private Printertype printertype;
-    private Stage stageId;
+    private Printertype printertid;
+    private Stage printer_stageid;
 
     public Printer() {
     }
 
-    public Printer(int rmaId, String companyName, String closed, Date issueDate, String faultySn, String replacementSn, Date returnedDate,
-                   String notes, String diagnosis, Boolean bulkink, String issueCategory, String result, Boolean approved, Printertype printertype, Stage stageId) {
-        this.rmaId = rmaId;
+    public Printer(int rmaid, String companyName, String closed, Date issueDate, String faultySn, String replacementSn, Date returnedDate, String notes, String diagnosis, Boolean bulkink, String issueCategory, String result, Boolean approved, Printertype printertid, Stage printer_stageid) {
+        this.rmaid = rmaid;
         this.companyName = companyName;
         this.closed = closed;
         this.issueDate = issueDate;
@@ -41,22 +41,22 @@ public class Printer {
         this.issueCategory = issueCategory;
         this.result = result;
         this.approved = approved;
-        this.printertype = printertype;
-        this.stageId = stageId;
+        this.printertid = printertid;
+        this.printer_stageid = printer_stageid;
     }
 
     @Id
-    @Column(name = "rmaID")
-    public int getRmaId() {
-        return rmaId;
+    @Column(name = "rmaid")
+    public int getRmaid() {
+        return rmaid;
     }
 
-    public void setRmaId(int rmaId) {
-        this.rmaId = rmaId;
+    public void setRmaid(int rmaid) {
+        this.rmaid = rmaid;
     }
 
     @Basic
-    @Column(name = "companyName")
+    @Column(name = "company_name")
     public String getCompanyName() {
         return companyName;
     }
@@ -76,7 +76,7 @@ public class Printer {
     }
 
     @Basic
-    @Column(name = "issueDate")
+    @Column(name = "issue_date")
     public Date getIssueDate() {
         return issueDate;
     }
@@ -86,7 +86,7 @@ public class Printer {
     }
 
     @Basic
-    @Column(name = "faultySn")
+    @Column(name = "faulty_sn")
     public String getFaultySn() {
         return faultySn;
     }
@@ -96,7 +96,7 @@ public class Printer {
     }
 
     @Basic
-    @Column(name = "replacementSn")
+    @Column(name = "replacement_sn")
     public String getReplacementSn() {
         return replacementSn;
     }
@@ -106,7 +106,7 @@ public class Printer {
     }
 
     @Basic
-    @Column(name = "returnedDate")
+    @Column(name = "returned_date")
     public Date getReturnedDate() {
         return returnedDate;
     }
@@ -146,7 +146,7 @@ public class Printer {
     }
 
     @Basic
-    @Column(name = "issueCategory")
+    @Column(name = "issue_category")
     public String getIssueCategory() {
         return issueCategory;
     }
@@ -175,25 +175,24 @@ public class Printer {
         this.approved = approved;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
-    @JoinColumn(name = "printerTID", referencedColumnName = "PrinterTypeID")
-    public Printertype getPrintertype() {
-        return printertype;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "printertid", referencedColumnName = "printertypeid")
+    public Printertype getPrintertid() {
+        return printertid;
     }
 
-    public void setPrintertype(Printertype printerType) {
-        this.printertype = printerType;
+    public void setPrintertid(Printertype printertid) {
+        this.printertid = printertid;
     }
 
-
-    @ManyToOne
-    @JoinColumn(name = "printerStageID", referencedColumnName = "StageID")
-    public Stage getStageId() {
-        return stageId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "printer_stageid", referencedColumnName = "stageid")
+    public Stage getPrinter_stageid() {
+        return printer_stageid;
     }
 
-    public void setStageId(Stage stageId) {
-        this.stageId = stageId;
+    public void setPrinter_stageid(Stage printer_stageid) {
+        this.printer_stageid = printer_stageid;
     }
 
 
@@ -202,8 +201,7 @@ public class Printer {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Printer printer = (Printer) o;
-        return rmaId == printer.rmaId &&
-                bulkink == printer.bulkink &&
+        return rmaid == printer.rmaid &&
                 Objects.equals(companyName, printer.companyName) &&
                 Objects.equals(closed, printer.closed) &&
                 Objects.equals(issueDate, printer.issueDate) &&
@@ -212,6 +210,7 @@ public class Printer {
                 Objects.equals(returnedDate, printer.returnedDate) &&
                 Objects.equals(notes, printer.notes) &&
                 Objects.equals(diagnosis, printer.diagnosis) &&
+                Objects.equals(bulkink, printer.bulkink) &&
                 Objects.equals(issueCategory, printer.issueCategory) &&
                 Objects.equals(result, printer.result) &&
                 Objects.equals(approved, printer.approved);
@@ -219,11 +218,25 @@ public class Printer {
 
     @Override
     public int hashCode() {
-        return Objects.hash(rmaId, companyName, closed, issueDate, faultySn, replacementSn, returnedDate, notes, diagnosis, bulkink, issueCategory, result, approved);
+        return Objects.hash(rmaid, companyName, closed, issueDate, faultySn, replacementSn, returnedDate, notes, diagnosis, bulkink, issueCategory, result, approved);
     }
 
     @Override
     public String toString() {
-        return bulkink + " " + approved;
+        return "Printer{" +
+                "rmaid=" + rmaid +
+                ", companyName='" + companyName + '\'' +
+                ", closed='" + closed + '\'' +
+                ", issueDate=" + issueDate +
+                ", faultySn='" + faultySn + '\'' +
+                ", replacementSn='" + replacementSn + '\'' +
+                ", returnedDate=" + returnedDate +
+                ", notes='" + notes + '\'' +
+                ", diagnosis='" + diagnosis + '\'' +
+                ", bulkink=" + bulkink +
+                ", issueCategory='" + issueCategory + '\'' +
+                ", result='" + result + '\'' +
+                ", approved=" + approved +
+                '}';
     }
 }

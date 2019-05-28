@@ -60,16 +60,17 @@ public class Printertype {
         Printertype that = (Printertype) o;
         return printertypeid == that.printertypeid &&
                 Objects.equals(printername, that.printername) &&
-                Objects.equals(printervariant, that.printervariant);
+                Objects.equals(printervariant, that.printervariant) &&
+                Objects.equals(printerrmatype, that.printerrmatype);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(printertypeid, printername, printervariant);
+        return Objects.hash(printertypeid, printername, printervariant, printerrmatype);
     }
 
     @Override
     public String toString() {
-        return printerrmatype + " - " + printername + " (" + printervariant + ")";
+        return printername + " (" + printerrmatype + ") - " + printervariant;
     }
 }

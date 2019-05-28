@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -23,22 +25,30 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1399.0" style="-fx-border-color: lightgrey;">
                      <children>
-                        <TableView fx:id="REPLACEMENTLABEL_PRINTER" layoutX="14.0" layoutY="14.0" prefHeight="555.0" prefWidth="1367.0">
-                          <columns>
-                            <TableColumn fx:id="RMA_COLUMN" prefWidth="60.0" text="RMA #" />
-                            <TableColumn fx:id="CUSTOMER_COLUMN" prefWidth="120.0" text="Customer Name" />
-                              <TableColumn fx:id="CLOSED_COLUMN" prefWidth="56.0" text="Closed" />
-                              <TableColumn fx:id="ISSUED_COLUMN" prefWidth="56.0" text="Issued" />
-                              <TableColumn fx:id="FAULTY_COLUMN" prefWidth="96.0" text="Faulty SN" />
-                              <TableColumn fx:id="REPLACEMENT_COLUMN" prefWidth="96.0" text="Rep. SN" />
-                              <TableColumn fx:id="RETURNED_COLUMN" prefWidth="77.0" text="Returned" />
-                              <TableColumn fx:id="NOTES_COLUMN" prefWidth="236.0" resizable="false" text="Notes" />
-                              <TableColumn fx:id="DIAGNOSIS_COLUMN" prefWidth="236.0" resizable="false" text="Diagnosis" />
-                              <TableColumn fx:id="BULK_COLUMN" text="Bulk Ink" />
-                              <TableColumn fx:id="ISSUE_COLUMN" prefWidth="85.0" text="Issue" />
-                              <TableColumn fx:id="RESULT_COLUMN" prefWidth="85.0" text="Result" />
-                              <TableColumn fx:id="APPROVED_COLUMN" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="81.0" text="Approved" />
-                          </columns>
+                        <TableView fx:id="REPLACEMENTLABEL_PRINTER" layoutX="15.0" layoutY="14.0" prefHeight="555.0" prefWidth="1370.0">
+                           <columns>
+                              <TableColumn fx:id="REPLACEMENTLABEL_RMA_COLUMN" prefWidth="60.0" text="RMA #" />
+                              <TableColumn fx:id="REPLACEMENTLABEL_CUSTOMER_COLUMN" prefWidth="120.0" text="Customer Name" />
+                              <TableColumn fx:id="REPLACEMENTLABEL_CLOSED_COLUMN" prefWidth="56.0" text="Closed" />
+                              <TableColumn fx:id="REPLACEMENTLABEL_ISSUED_COLUMN" prefWidth="56.0" text="Issued" />
+                              <TableColumn fx:id="REPLACEMENTLABEL_FAULTY_COLUMN" prefWidth="96.0" text="Faulty SN" />
+                              <TableColumn fx:id="REPLACEMENTLABEL_REPLACEMENT_COLUMN" prefWidth="96.0" text="Rep. SN" />
+                              <TableColumn fx:id="REPLACEMENTLABEL_RETURNED_COLUMN" prefWidth="77.0" text="Returned" />
+                              <TableColumn fx:id="REPLACEMENTLABEL_NOTES_COLUMN" prefWidth="248.0" resizable="false" text="Notes" />
+                              <TableColumn fx:id="REPLACEMENTLABEL_DIAGNOSIS_COLUMN" prefWidth="263.0" resizable="false" text="Diagnosis" />
+                              <TableColumn fx:id="REPLACEMENTLABEL_BULK_COLUMN" prefWidth="76.0" text="Bulk Ink" />
+                              <TableColumn fx:id="REPLACEMENTLABEL_ISSUE_COLUMN" prefWidth="51.0" text="Issue" />
+                              <TableColumn fx:id="REPLACEMENTLABEL_RESULT_COLUMN" prefWidth="89.0" text="Result" />
+                              <TableColumn fx:id="REPLACEMENTLABEL_APPROVED_COLUMN" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="78.0" text="Approved" />
+                           </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#handleEditPrinter" text="Edit" />
+                                    <MenuItem mnemonicParsing="false" text="Delete" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu>
                         </TableView>
                      </children>
                   </AnchorPane>
@@ -50,19 +60,19 @@
                      <children>
                         <TableView fx:id="RMALABEL_PRINTER" layoutX="14.0" layoutY="14.0" prefHeight="555.0" prefWidth="1370.0">
                            <columns>
-                              <TableColumn fx:id="RMA_COLUMN" prefWidth="60.0" text="RMA #" />
-                              <TableColumn fx:id="CUSTOMER_COLUMN" prefWidth="120.0" text="Customer Name" />
-                              <TableColumn fx:id="CLOSED_COLUMN" prefWidth="56.0" text="Closed" />
-                              <TableColumn fx:id="ISSUED_COLUMN" prefWidth="56.0" text="Issued" />
-                              <TableColumn fx:id="FAULTY_COLUMN" prefWidth="96.0" text="Faulty SN" />
-                              <TableColumn fx:id="REPLACEMENT_COLUMN" prefWidth="96.0" text="Rep. SN" />
-                              <TableColumn fx:id="RETURNED_COLUMN" prefWidth="77.0" text="Returned" />
-                              <TableColumn fx:id="NOTES_COLUMN" prefWidth="248.0" resizable="false" text="Notes" />
-                              <TableColumn fx:id="DIAGNOSIS_COLUMN" prefWidth="263.0" resizable="false" text="Diagnosis" />
-                              <TableColumn fx:id="BULK_COLUMN" prefWidth="76.0" text="Bulk Ink" />
-                              <TableColumn fx:id="ISSUE_COLUMN" prefWidth="51.0" text="Issue" />
-                              <TableColumn fx:id="RESULT_COLUMN" prefWidth="89.0" text="Result" />
-                              <TableColumn fx:id="APPROVED_COLUMN" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="78.0" text="Approved" />
+                              <TableColumn fx:id="RMALABEL_RMA_COLUMN" prefWidth="60.0" text="RMA #" />
+                              <TableColumn fx:id="RMALABEL_CUSTOMER_COLUMN" prefWidth="120.0" text="Customer Name" />
+                              <TableColumn fx:id="RMALABEL_CLOSED_COLUMN" prefWidth="56.0" text="Closed" />
+                              <TableColumn fx:id="RMALABEL_ISSUED_COLUMN" prefWidth="56.0" text="Issued" />
+                              <TableColumn fx:id="RMALABEL_FAULTY_COLUMN" prefWidth="96.0" text="Faulty SN" />
+                              <TableColumn fx:id="RMALABEL_REPLACEMENT_COLUMN" prefWidth="96.0" text="Rep. SN" />
+                              <TableColumn fx:id="RMALABEL_RETURNED_COLUMN" prefWidth="77.0" text="Returned" />
+                              <TableColumn fx:id="RMALABEL_NOTES_COLUMN" prefWidth="248.0" resizable="false" text="Notes" />
+                              <TableColumn fx:id="RMALABEL_DIAGNOSIS_COLUMN" prefWidth="263.0" resizable="false" text="Diagnosis" />
+                              <TableColumn fx:id="RMALABEL_BULK_COLUMN" prefWidth="76.0" text="Bulk Ink" />
+                              <TableColumn fx:id="RMALABEL_ISSUE_COLUMN" prefWidth="51.0" text="Issue" />
+                              <TableColumn fx:id="RMALABEL_RESULT_COLUMN" prefWidth="89.0" text="Result" />
+                              <TableColumn fx:id="RMALABEL_APPROVED_COLUMN" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="78.0" text="Approved" />
                            </columns>
                         </TableView>
                      </children>
@@ -73,21 +83,21 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="16.0" layoutY="13.0" prefHeight="555.0" prefWidth="1333.0">
+                        <TableView fx:id="REPLACEMENTLOG_PRINTER" layoutX="15.0" layoutY="14.0" prefHeight="555.0" prefWidth="1370.0">
                            <columns>
-                              <TableColumn prefWidth="60.0" text="RMA #" />
-                              <TableColumn prefWidth="120.0" text="Customer Name" />
-                              <TableColumn prefWidth="56.0" text="Closed" />
-                              <TableColumn prefWidth="56.0" text="Issued" />
-                              <TableColumn prefWidth="96.0" text="Faulty SN" />
-                              <TableColumn prefWidth="96.0" text="Rep. SN" />
-                              <TableColumn prefWidth="77.0" text="Returned" />
-                              <TableColumn prefWidth="236.0" text="Notes" />
-                              <TableColumn prefWidth="236.0" text="Diagnosis" />
-                              <TableColumn prefWidth="70.0" text="Bulk Ink" />
-                              <TableColumn prefWidth="70.0" text="Issue" />
-                              <TableColumn prefWidth="56.0" text="Result" />
-                              <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="101.0" text="Approved" />
+                              <TableColumn fx:id="REPLACEMENTLOG_RMA_COLUMN" prefWidth="60.0" text="RMA #" />
+                              <TableColumn fx:id="REPLACEMENTLOG_CUSTOMER_COLUMN" prefWidth="120.0" text="Customer Name" />
+                              <TableColumn fx:id="REPLACEMENTLOG_CLOSED_COLUMN" prefWidth="56.0" text="Closed" />
+                              <TableColumn fx:id="REPLACEMENTLOG_ISSUED_COLUMN" prefWidth="56.0" text="Issued" />
+                              <TableColumn fx:id="REPLACEMENTLOG_FAULTY_COLUMN" prefWidth="96.0" text="Faulty SN" />
+                              <TableColumn fx:id="REPLACEMENTLOG_REPLACEMENT_COLUMN" prefWidth="96.0" text="Rep. SN" />
+                              <TableColumn fx:id="REPLACEMENTLOG_RETURNED_COLUMN" prefWidth="77.0" text="Returned" />
+                              <TableColumn fx:id="REPLACEMENTLOG_NOTES_COLUMN" prefWidth="248.0" resizable="false" text="Notes" />
+                              <TableColumn fx:id="REPLACEMENTLOG_DIAGNOSIS_COLUMN" prefWidth="263.0" resizable="false" text="Diagnosis" />
+                              <TableColumn fx:id="REPLACEMENTLOG_BULK_COLUMN" prefWidth="76.0" text="Bulk Ink" />
+                              <TableColumn fx:id="REPLACEMENTLOG_ISSUE_COLUMN" prefWidth="51.0" text="Issue" />
+                              <TableColumn fx:id="REPLACEMENTLOG_RESULT_COLUMN" prefWidth="89.0" text="Result" />
+                              <TableColumn fx:id="REPLACEMENTLOG_APPROVED_COLUMN" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="78.0" text="Approved" />
                            </columns>
                         </TableView>
                      </children></AnchorPane>
@@ -97,21 +107,21 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="16.0" layoutY="13.0" prefHeight="555.0" prefWidth="1333.0">
+                        <TableView fx:id="RMALOG_PRINTER" layoutX="15.0" layoutY="14.0" prefHeight="555.0" prefWidth="1370.0">
                            <columns>
-                              <TableColumn prefWidth="60.0" text="RMA #" />
-                              <TableColumn prefWidth="120.0" text="Customer Name" />
-                              <TableColumn prefWidth="56.0" text="Closed" />
-                              <TableColumn prefWidth="56.0" text="Issued" />
-                              <TableColumn prefWidth="96.0" text="Faulty SN" />
-                              <TableColumn prefWidth="96.0" text="Rep. SN" />
-                              <TableColumn prefWidth="77.0" text="Returned" />
-                              <TableColumn prefWidth="236.0" text="Notes" />
-                              <TableColumn prefWidth="236.0" text="Diagnosis" />
-                              <TableColumn prefWidth="70.0" text="Bulk Ink" />
-                              <TableColumn prefWidth="70.0" text="Issue" />
-                              <TableColumn prefWidth="56.0" text="Result" />
-                              <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="101.0" text="Approved" />
+                              <TableColumn fx:id="RMALOG_RMA_COLUMN" prefWidth="60.0" text="RMA #" />
+                              <TableColumn fx:id="RMALOG_CUSTOMER_COLUMN" prefWidth="120.0" text="Customer Name" />
+                              <TableColumn fx:id="RMALOG_CLOSED_COLUMN" prefWidth="56.0" text="Closed" />
+                              <TableColumn fx:id="RMALOG_ISSUED_COLUMN" prefWidth="56.0" text="Issued" />
+                              <TableColumn fx:id="RMALOG_FAULTY_COLUMN" prefWidth="96.0" text="Faulty SN" />
+                              <TableColumn fx:id="RMALOG_REPLACEMENT_COLUMN" prefWidth="96.0" text="Rep. SN" />
+                              <TableColumn fx:id="RMALOG_RETURNED_COLUMN" prefWidth="77.0" text="Returned" />
+                              <TableColumn fx:id="RMALOG_NOTES_COLUMN" prefWidth="248.0" resizable="false" text="Notes" />
+                              <TableColumn fx:id="RMALOG_DIAGNOSIS_COLUMN" prefWidth="263.0" resizable="false" text="Diagnosis" />
+                              <TableColumn fx:id="RMALOG_BULK_COLUMN" prefWidth="76.0" text="Bulk Ink" />
+                              <TableColumn fx:id="RMALOG_ISSUE_COLUMN" prefWidth="51.0" text="Issue" />
+                              <TableColumn fx:id="RMALOG_RESULT_COLUMN" prefWidth="89.0" text="Result" />
+                              <TableColumn fx:id="RMALOG_APPROVED_COLUMN" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="78.0" text="Approved" />
                            </columns>
                         </TableView>
                      </children></AnchorPane>
@@ -139,6 +149,6 @@
         </tabs>
       </TabPane>
       <Button fx:id="addButton" layoutX="1353.0" layoutY="726.0" mnemonicParsing="false" onAction="#addPrinter" prefHeight="32.0" prefWidth="112.0" text="Add" />
-      <Button fx:id="RefreshButton" layoutX="1260.0" layoutY="726.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="80.0" text="Refresh" />
+      <Button fx:id="RefreshButton" layoutX="1260.0" layoutY="726.0" mnemonicParsing="false" onAction="#loadData" prefHeight="32.0" prefWidth="80.0" text="Refresh" />
    </children>
 </AnchorPane>

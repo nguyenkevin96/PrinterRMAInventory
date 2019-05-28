@@ -41,7 +41,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Thread thread = new Thread(new Runnable() {
+        /*Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 Runnable runnable = new Runnable() {
@@ -64,9 +64,32 @@ public class Main extends Application {
         });
         thread.setDaemon(true);
         thread.start();
-
+*/
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+    }
+
+    public void runTask(){
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                updateTable();
+            }
+        };
+
+        Thread background = new Thread();
+        background.setDaemon(true);
+        background.start();
+    }
+
+    public void updateTable(){
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                mainController = fxmlLoader.getController();
+                mainController.loadData();
+            }
+        });
     }
 
     private void incrementCount(){

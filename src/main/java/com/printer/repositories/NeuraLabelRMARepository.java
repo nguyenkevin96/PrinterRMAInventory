@@ -12,7 +12,7 @@ import java.util.List;
 public interface NeuraLabelRMARepository extends JpaRepository<Printer, Integer> {
 
     //Returns printers under the given printer type
-    List<Printer> findAllByPrintertype(Printertype type);
+    //List<Printer> findAllByPrintertypeid(Integer index);
 
     //Returns printers that are Label Printers
     @Query(value = "SELECT * " +
