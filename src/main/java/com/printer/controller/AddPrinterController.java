@@ -33,9 +33,13 @@ public class AddPrinterController implements Initializable{
     @Autowired
     private ConfigurableApplicationContext applicationContext;
 
-    public ArrayList<Printertype> printerNames;
+    private ArrayList<Printertype> printerNames;
 
-    public ArrayList<Stage> stageList;
+    private ArrayList<Stage> stageList;
+
+    public String DATE_ERRORMESSAGE = "Your issue date should be before the return date",
+            RMA_ERRORMESSAGE = "Your RMA should be 4 digits",
+            RMAFORMAT_ERRORMESSAGE = "Your RMA should be a number";
 
     @FXML
     private TextField RMA_TEXT, CUSTOMER_TEXT, FAULTY_TEXT, REPLACEMENT_TEXT, ERROR_TEXT;
@@ -139,12 +143,19 @@ public class AddPrinterController implements Initializable{
     private void addPrinter(ActionEvent event) throws IOException{
         Date date = Date.valueOf(ISSUE_DATE.getValue());
         Date returned = Date.valueOf(RETURN_DATE.getValue());
-        Printer neuralabel = new Printer(Integer.parseInt(RMA_TEXT.getText()), CUSTOMER_TEXT.getText(), CLOSED_BOX.getSelectionModel().getSelectedItem(), date,
-                FAULTY_TEXT.getText(), REPLACEMENT_TEXT.getText(), returned, NOTES_TEXTA.getText(), DIAGNOSIS_TEXTA.getText(), BULK_BOX.getSelectionModel().getSelectedItem().equals("Yes"),
-                ISSUE_BOX.getSelectionModel().getSelectedItem(), RESULT_BOX.getSelectionModel().getSelectedItem(), APPROVED_BOX.getSelectionModel().getSelectedItem().equals("Yes"),
-                PRINTER_BOX.getSelectionModel().getSelectedItem(), STAGE_BOX.getSelectionModel().getSelectedItem());
-        neuraLabelRMARepository.saveAndFlush(neuralabel);
-        previousWindow(event);
+        try {
+            Printer printer = new Printer(Integer.parseInt(RMA_TEXT.getText()), CUSTOMER_TEXT.getText(), CLOSED_BOX.getSelectionModel().getSelectedItem(), date,
+                    FAULTY_TEXT.getText(), REPLACEMENT_TEXT.getText(), returned, NOTES_TEXTA.getText(), DIAGNOSIS_TEXTA.getText(), BULK_BOX.getSelectionModel().getSelectedItem().equals("Yes"),
+                    ISSUE_BOX.getSelectionModel().getSelectedItem(), RESULT_BOX.getSelectionModel().getSelectedItem(), APPROVED_BOX.getSelectionModel().getSelectedItem().equals("Yes"),
+                    PRINTER_BOX.getSelectionModel().getSelectedItem(), STAGE_BOX.getSelectionModel().getSelectedItem());
+
+            if(printerIsValid(printer)){
+                neuraLabelRMARepository.save(printer);
+                previousWindow(event);
+            }
+        } catch (NumberFormatException numF){
+            alert(RMAFORMAT_ERRORMESSAGE);
+        }
     }
 
     private void previousWindow(ActionEvent event) throws IOException {
@@ -152,5 +163,26 @@ public class AddPrinterController implements Initializable{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
         fxmlLoader.setControllerFactory(applicationContext::getBean);
         parent.close();
+    }
+
+    private boolean printerIsValid(Printer printer){
+        boolean isPrinterValid = false;
+        if(printer.getRmaid() > 1000 && printer.getRmaid() < 9999) {
+            if (printer.getIssueDate().before(printer.getReturnedDate()))
+                isPrinterValid = true;
+            else {
+                alert(DATE_ERRORMESSAGE);
+            }
+        } else {
+            alert(RMA_ERRORMESSAGE);
+        }
+        return isPrinterValid;
+    }
+
+    private void alert(String alertMessage){
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setHeaderText("Error");
+        alert.setContentText(alertMessage);
+        alert.showAndWait();
     }
 }

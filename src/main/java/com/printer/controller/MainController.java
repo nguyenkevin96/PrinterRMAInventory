@@ -3,6 +3,7 @@ package com.printer.controller;
 import com.printer.classes.Printer;
 import com.printer.repositories.NeuraLabelRMARepository;
 import com.printer.repositories.PrinterTypeRepository;
+import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
@@ -13,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -109,6 +111,7 @@ public class MainController implements Initializable {
         listOfReplacedLog = FXCollections.observableArrayList();
         loadCellData();
         wrappableCells();
+        colorCodeTableCell();
         System.out.println("Called Main Controller");
     }
 
@@ -192,6 +195,63 @@ public class MainController implements Initializable {
             text.wrappingWidthProperty().bind(RMALOG_DIAGNOSIS_COLUMN.widthProperty());
             text.textProperty().bind(diagnosisCell.itemProperty());
             return diagnosisCell ;
+        });
+    }
+
+    private void colorCodeTableCell(){
+        REPLACEMENTLABEL_PRINTER.setRowFactory(tr -> new TableRow<Printer>(){
+            @Override
+            protected void updateItem(Printer item, boolean empty) {
+                super.updateItem(item, empty);
+                /*
+                if(item == null || empty){
+                    setStyle("-fx-background-color: white");
+                } else if(item.getPrinter_stageid().getStagename().equals("Outstanding RMA")){
+                    setStyle("-fx-background-color: yellow");
+                }
+*/
+                if(item == null || empty){
+                    setStyle("-fx-background-color: white");
+                } else {
+                    String printer = item.getPrinter_stageid().getStagename();
+                    switch (printer){
+                        case "Outstanding RMA": {
+                            setStyle("-fx-background-color: yellow");
+                            break;
+                        }
+                        case "Closed/Received RMA": {
+                            setStyle("-fx-background-color: lightyellow");
+                            break;
+                        }
+                        case "Loaner": {
+                            setStyle("-fx-background-color: limegreen");
+                            break;
+                        }
+                        case "Upgrade": {
+                            setStyle("-fx-background-color: teal");
+                            break;
+                        }
+                        case "Possible Sale": {
+                            setStyle("-fx-background-color: lightgreen");
+                            break;
+                        }
+                        case "Swap": {
+                            setStyle("-fx-background-color: orange");
+                            break;
+                        }
+                        case "Sale": {
+                            setStyle("-fx-background-color: hotpink");
+                            break;
+                        }
+                        case "Demo Unit": {
+                            setStyle("-fx-background-color: grey");
+                            break;
+                        }
+                        default:
+                            break;
+                    }
+                }
+            }
         });
     }
 

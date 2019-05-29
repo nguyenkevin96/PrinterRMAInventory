@@ -175,7 +175,7 @@ public class Printer {
         this.approved = approved;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "printertid", referencedColumnName = "printertypeid")
     public Printertype getPrintertid() {
         return printertid;
@@ -185,7 +185,7 @@ public class Printer {
         this.printertid = printertid;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "printer_stageid", referencedColumnName = "stageid")
     public Stage getPrinter_stageid() {
         return printer_stageid;

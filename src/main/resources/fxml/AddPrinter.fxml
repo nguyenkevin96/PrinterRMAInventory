@@ -66,6 +66,6 @@
          </children>
       </AnchorPane>
       <Button fx:id="saveButton" layoutX="710.0" layoutY="554.0" mnemonicParsing="false" onAction="#addPrinter" prefHeight="33.0" prefWidth="112.0" text="Save" />
-      <Button fx:id="saveButton1" layoutX="473.0" layoutY="554.0" mnemonicParsing="false" onAction="#test" prefHeight="33.0" prefWidth="112.0" text="Nothing" />
+      <Button fx:id="saveButton1" layoutX="473.0" layoutY="554.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="112.0" text="Nothing" />
    </children>
 </AnchorPane>
