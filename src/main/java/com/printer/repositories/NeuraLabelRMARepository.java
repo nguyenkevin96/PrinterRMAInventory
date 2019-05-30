@@ -34,4 +34,6 @@ public interface NeuraLabelRMARepository extends JpaRepository<Printer, Integer>
             "FROM printer " +
             "WHERE printertid = 10 OR printertid = 11 OR printertid = 12", nativeQuery = true)
     List<Printer> findAllRMANeuraLog();
+
+    List<Printer> findAllByRmaid(int index);
 }

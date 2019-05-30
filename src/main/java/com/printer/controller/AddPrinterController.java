@@ -185,4 +185,22 @@ public class AddPrinterController implements Initializable{
         alert.setContentText(alertMessage);
         alert.showAndWait();
     }
+
+    public void editPrinter(Printer printer){
+        RMA_TEXT.setText(String.valueOf(printer.getRmaid()));
+        CUSTOMER_TEXT.setText(printer.getCompanyName());
+        CLOSED_BOX.setValue(printer.getClosed());
+        ISSUE_DATE.setValue(printer.getIssueDate().toLocalDate());
+        FAULTY_TEXT.setText(printer.getFaultySn());
+        REPLACEMENT_TEXT.setText(printer.getReplacementSn());
+        RETURN_DATE.setValue(printer.getReturnedDate().toLocalDate());
+        NOTES_TEXTA.setText(printer.getNotes());
+        DIAGNOSIS_TEXTA.setText(printer.getDiagnosis());
+        BULK_BOX.setValue(printer.getBulkink() ? "Yes" : "No");
+        ISSUE_BOX.setValue(printer.getIssueDate().toString());
+        RESULT_BOX.setValue(printer.getResult());
+        APPROVED_BOX.setValue(printer.getApproved()? "Yes" : "No");
+        PRINTER_BOX.setValue(printer.getPrintertid());
+        STAGE_BOX.setValue(printer.getPrinter_stageid());
+    }
 }

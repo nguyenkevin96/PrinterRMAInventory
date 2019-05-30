@@ -95,13 +95,14 @@ public class MainController implements Initializable {
 
     private ObservableList<Printer> listOfRmaLabel, listOfReplacedLabel, listOfRmaLog, listOfReplacedLog, listOfSerialDoors;
 
+    @FXML
+    private TextField RMA_SEARCHTEXT, SERIAL_SEARCHTEXT, CUSTOMER_SEARCHTEXT;
+
     @Autowired
     private NeuraLabelRMARepository neuraLabelRMARepository;
 
     @Autowired
     private PrinterTypeRepository printerTypeRepository;
-
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -112,7 +113,29 @@ public class MainController implements Initializable {
         loadCellData();
         wrappableCells();
         colorCodeTableCell();
+        searchAddListener();
         System.out.println("Called Main Controller");
+
+        RMA_SEARCHTEXT.textProperty().addListener((obs, oldValue, newValue) -> {
+            if(newValue.equals("")){
+                loadData();
+            } else {
+                listOfRmaLabel.clear();
+                listOfReplacedLabel.clear();
+                listOfRmaLog.clear();
+                listOfReplacedLog.clear();
+
+                listOfRmaLabel.addAll(neuraLabelRMARepository.findAllByRmaid(Integer.parseInt(newValue)));
+                listOfReplacedLabel.addAll(neuraLabelRMARepository.findAllByRmaid(Integer.parseInt(newValue)));
+                listOfRmaLog.addAll(neuraLabelRMARepository.findAllByRmaid(Integer.parseInt(newValue)));
+                listOfReplacedLog.addAll(neuraLabelRMARepository.findAllByRmaid(Integer.parseInt(newValue)));
+
+                RMALABEL_PRINTER.setItems(listOfRmaLabel);
+                REPLACEMENTLABEL_PRINTER.setItems(listOfReplacedLabel);
+                RMALOG_PRINTER.setItems(listOfRmaLog);
+                REPLACEMENTLOG_PRINTER.setItems(listOfReplacedLog);
+            }
+        });
     }
 
     //Sets the notes and diagnosis column into a wrappable text cell
@@ -203,13 +226,7 @@ public class MainController implements Initializable {
             @Override
             protected void updateItem(Printer item, boolean empty) {
                 super.updateItem(item, empty);
-                /*
-                if(item == null || empty){
-                    setStyle("-fx-background-color: white");
-                } else if(item.getPrinter_stageid().getStagename().equals("Outstanding RMA")){
-                    setStyle("-fx-background-color: yellow");
-                }
-*/
+
                 if(item == null || empty){
                     setStyle("-fx-background-color: white");
                 } else {
@@ -330,12 +347,25 @@ public class MainController implements Initializable {
         REPLACEMENTLOG_PRINTER.setItems(listOfReplacedLog);
     }
 
+    @SuppressWarnings("Duplicates")
     @FXML
-    private void handleEditPrinter(){
+    private void handleEditPrinter(ActionEvent event) throws IOException{
         Printer selectedPrinter = REPLACEMENTLABEL_PRINTER.getSelectionModel().getSelectedItem();
         System.out.println(selectedPrinter);
+
+        Stage parent = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("/fxml/AddPrinter.fxml"));
+        fxmlLoader.setControllerFactory(applicationContext::getBean);
+        Scene scene = new Scene(fxmlLoader.load());
+        AddPrinterController controller = fxmlLoader.getController();
+        controller.editPrinter(selectedPrinter);
+        parent.setScene(scene);
+        parent.showAndWait();
+        loadData();
     }
 
+    @SuppressWarnings("Duplicates")
     @FXML
     private void addPrinter(ActionEvent event) throws IOException {
         //This is the original code for switching to the AddPrinter Form
@@ -349,5 +379,8 @@ public class MainController implements Initializable {
         parent.setScene(scene);
         parent.showAndWait();
         loadData();
+    }
+
+    private void searchAddListener(){
     }
 }
